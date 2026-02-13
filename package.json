@@ -1,0 +1,40 @@
+{
+  "name": "voice",
+  "version": "1.0.3",
+  "main": "main.js",
+
+  "scripts": {
+    "start": "node server.js",
+    "app": "electron .",
+    "build": "electron-builder"
+  },
+
+  "build": {
+    "appId": "com.voice.app",
+    "productName": "Voice",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "ТВОЙ_GITHUB_НИК",
+        "repo": "voice"
+      }
+    ]
+  },
+
+  "dependencies": {
+    "express": "^5.2.1",
+    "ws": "^8.19.0",
+    "electron-updater": "^6.3.0"
+  },
+
+  "devDependencies": {
+    "electron": "^40.4.0",
+    "electron-builder": "^24.13.3"
+  }
+}
